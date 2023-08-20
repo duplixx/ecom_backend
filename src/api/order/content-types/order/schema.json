@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "singularName": "order",
+    "pluralName": "orders",
+    "displayName": "order"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "city": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "shippingAddress": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "integer"
+    },
+    "items": {
+      "type": "json"
+    },
+    "pin": {
+      "type": "integer"
+    }
+  }
+}

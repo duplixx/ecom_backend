@@ -1,0 +1,70 @@
+{
+  "kind": "collectionType",
+  "collectionName": "profiles",
+  "info": {
+    "singularName": "profile",
+    "pluralName": "profiles",
+    "displayName": "profile",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstName": {
+      "type": "text",
+      "required": true
+    },
+    "lastName": {
+      "type": "text",
+      "required": true
+    },
+    "gender": {
+      "type": "enumeration",
+      "required": false,
+      "enum": [
+        "Male",
+        "Female"
+      ]
+    },
+    "dateOfBirth": {
+      "type": "date",
+      "required": false
+    },
+    "age": {
+      "type": "integer",
+      "required": false
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "phoneNo": {
+      "type": "biginteger",
+      "required": false
+    },
+    "landlineNo": {
+      "type": "text"
+    },
+    "profileImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "address": {
+      "type": "json"
+    },
+    "userAddress": {
+      "type": "json"
+    }
+  }
+}
